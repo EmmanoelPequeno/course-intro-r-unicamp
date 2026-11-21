@@ -6,8 +6,8 @@
 <script src="slides_exercises_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_exercises_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_exercises_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_exercises_files/libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.35">
+<link href="slides_exercises_files/libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
 
   <meta name="author" content="Maurício Vancine">
   <title>Aula 8 – Rmarkdown + Github</title>
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -204,7 +207,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://mauriciovancine.github.io">Maurício Vancine</a> 
+<a href="https://mauriciovancine.github.io">Maurício Vancine</a>
 </div>
 </div>
 </div>
@@ -422,10 +425,10 @@
 </ul>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="sc">$</span> git config <span class="sc">--</span>list</span>
-<span id="cb1-2"><a href=""></a><span class="sc">$</span> git config <span class="sc">--</span>global user.name <span class="st">"meu nome"</span></span>
-<span id="cb1-3"><a href=""></a><span class="sc">$</span> git config <span class="sc">--</span>global user.email <span class="st">"email@dominio.com"</span></span>
-<span id="cb1-4"><a href=""></a><span class="sc">$</span> git config <span class="sc">--</span>list</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-label="1"></a><span class="sc">$</span> git config <span class="sc">--</span>list</span>
+<span id="cb1-2"><a href="" aria-label="2"></a><span class="sc">$</span> git config <span class="sc">--</span>global user.name <span class="st">"meu nome"</span></span>
+<span id="cb1-3"><a href="" aria-label="3"></a><span class="sc">$</span> git config <span class="sc">--</span>global user.email <span class="st">"email@dominio.com"</span></span>
+<span id="cb1-4"><a href="" aria-label="4"></a><span class="sc">$</span> git config <span class="sc">--</span>list</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 <img data-src="img/rstudio_terminal02.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
@@ -517,7 +520,7 @@
 <h2>Prática 6</h2>
 <p><strong>Forkar um diretório remoto</strong></p>
 <ol type="1">
-<li>Forken o repositório <code>syllabus-text</code> da disciplina</li>
+<li>Forken o repositório <code>syllabus-text</code> de uma disciplina que ministrei</li>
 </ol>
 
 <img data-src="img/github_fork_site.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
@@ -539,10 +542,10 @@
 <p>Primeiro, vamos <strong>criar uma pasta</strong> chamada <code>github</code></p>
 <p><br></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="st">".                               # raiz"</span></span>
-<span id="cb2-2"><a href=""></a><span class="st">"    ├── home/                   # home"</span></span>
-<span id="cb2-3"><a href=""></a><span class="st">"        ├── data/               # dados"</span> </span>
-<span id="cb2-4"><a href=""></a><span class="st">"            ├── github/         # todos os repositorios"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="" aria-label="1"></a><span class="st">".                               # raiz"</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a><span class="st">"    ├── home/                   # home"</span></span>
+<span id="cb2-3"><a href="" aria-label="3"></a><span class="st">"        ├── data/               # dados"</span> </span>
+<span id="cb2-4"><a href="" aria-label="4"></a><span class="st">"            ├── github/         # todos os repositorios"</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><img data-src="img/diretorio.png" class="absolute" style="top: 400px; right: 30px; width: 100%; "></p>
 </section>
@@ -673,20 +676,20 @@
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Inicializar ambiente renv</span></span>
-<span id="cb3-2"><a href=""></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
-<span id="cb3-3"><a href=""></a></span>
-<span id="cb3-4"><a href=""></a><span class="co"># Verificar o estado atual dos pacotes</span></span>
-<span id="cb3-5"><a href=""></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
-<span id="cb3-6"><a href=""></a></span>
-<span id="cb3-7"><a href=""></a><span class="co"># Instalar pacotes usando o renv</span></span>
-<span id="cb3-8"><a href=""></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb3-9"><a href=""></a></span>
-<span id="cb3-10"><a href=""></a><span class="co"># Registrar estado atual dos pacotes</span></span>
-<span id="cb3-11"><a href=""></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span>
-<span id="cb3-12"><a href=""></a></span>
-<span id="cb3-13"><a href=""></a><span class="co"># Restaurar ambiente em outra máquina</span></span>
-<span id="cb3-14"><a href=""></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-label="1"></a><span class="co"># Inicializar ambiente renv</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb3-3"><a href="" aria-label="3"></a></span>
+<span id="cb3-4"><a href="" aria-label="4"></a><span class="co"># Verificar o estado atual dos pacotes</span></span>
+<span id="cb3-5"><a href="" aria-label="5"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
+<span id="cb3-6"><a href="" aria-label="6"></a></span>
+<span id="cb3-7"><a href="" aria-label="7"></a><span class="co"># Instalar pacotes usando o renv</span></span>
+<span id="cb3-8"><a href="" aria-label="8"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb3-9"><a href="" aria-label="9"></a></span>
+<span id="cb3-10"><a href="" aria-label="10"></a><span class="co"># Registrar estado atual dos pacotes</span></span>
+<span id="cb3-11"><a href="" aria-label="11"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span>
+<span id="cb3-12"><a href="" aria-label="12"></a></span>
+<span id="cb3-13"><a href="" aria-label="13"></a><span class="co"># Restaurar ambiente em outra máquina</span></span>
+<span id="cb3-14"><a href="" aria-label="14"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:40%;">
 <center>
@@ -731,35 +734,35 @@
 </div><div class="column" style="width:60%;">
 <div style="font-size: 60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-code-line-numbers="|1-6|8-15|17-29|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="sc">---</span></span>
-<span id="cb4-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"Hello, Penguins"</span></span>
-<span id="cb4-3"><a href=""></a>format<span class="sc">:</span> html</span>
-<span id="cb4-4"><a href=""></a>execute<span class="sc">:</span></span>
-<span id="cb4-5"><a href=""></a>  echo<span class="sc">:</span> false</span>
-<span id="cb4-6"><a href=""></a><span class="sc">---</span></span>
-<span id="cb4-7"><a href=""></a></span>
-<span id="cb4-8"><a href=""></a><span class="do">## Meet the penguins</span></span>
-<span id="cb4-9"><a href=""></a></span>
-<span id="cb4-10"><a href=""></a>The __penguins__ data contains size measurements <span class="cf">for</span> </span>
-<span id="cb4-11"><a href=""></a>penguins from three islands <span class="cf">in</span> the Palmer Archipelago, </span>
-<span id="cb4-12"><a href=""></a>Antarctica.</span>
-<span id="cb4-13"><a href=""></a></span>
-<span id="cb4-14"><a href=""></a>The _three_ species of penguins have quite distinct </span>
-<span id="cb4-15"><a href=""></a>distributions of physical <span class="fu">dimensions</span> (<span class="sc">@</span>fig<span class="sc">-</span>penguins).</span>
-<span id="cb4-16"><a href=""></a></span>
-<span id="cb4-17"><a href=""></a><span class="co"># ```{r}</span></span>
-<span id="cb4-18"><a href=""></a><span class="co">#| label: fig-penguins</span></span>
-<span id="cb4-19"><a href=""></a><span class="co">#| fig-cap: "Dimensions of penguins across three species."</span></span>
-<span id="cb4-20"><a href=""></a><span class="co">#| warning: false</span></span>
-<span id="cb4-21"><a href=""></a><span class="fu">library</span>(tidyverse, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-22"><a href=""></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb4-23"><a href=""></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb4-24"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb4-25"><a href=""></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb4-26"><a href=""></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb4-27"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb4-28"><a href=""></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-29"><a href=""></a><span class="co"># ```</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-code-line-numbers="|1-6|8-15|17-29|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="" aria-label="1"></a><span class="sc">---</span></span>
+<span id="cb4-2"><a href="" aria-label="2"></a>title<span class="sc">:</span> <span class="st">"Hello, Penguins"</span></span>
+<span id="cb4-3"><a href="" aria-label="3"></a>format<span class="sc">:</span> html</span>
+<span id="cb4-4"><a href="" aria-label="4"></a>execute<span class="sc">:</span></span>
+<span id="cb4-5"><a href="" aria-label="5"></a>  echo<span class="sc">:</span> false</span>
+<span id="cb4-6"><a href="" aria-label="6"></a><span class="sc">---</span></span>
+<span id="cb4-7"><a href="" aria-label="7"></a></span>
+<span id="cb4-8"><a href="" aria-label="8"></a><span class="do">## Meet the penguins</span></span>
+<span id="cb4-9"><a href="" aria-label="9"></a></span>
+<span id="cb4-10"><a href="" aria-label="10"></a>The __penguins__ data contains size measurements <span class="cf">for</span> </span>
+<span id="cb4-11"><a href="" aria-label="11"></a>penguins from three islands <span class="cf">in</span> the Palmer Archipelago, </span>
+<span id="cb4-12"><a href="" aria-label="12"></a>Antarctica.</span>
+<span id="cb4-13"><a href="" aria-label="13"></a></span>
+<span id="cb4-14"><a href="" aria-label="14"></a>The _three_ species of penguins have quite distinct </span>
+<span id="cb4-15"><a href="" aria-label="15"></a>distributions of physical <span class="fu">dimensions</span> (<span class="sc">@</span>fig<span class="sc">-</span>penguins).</span>
+<span id="cb4-16"><a href="" aria-label="16"></a></span>
+<span id="cb4-17"><a href="" aria-label="17"></a><span class="co"># ```{r}</span></span>
+<span id="cb4-18"><a href="" aria-label="18"></a><span class="co">#| label: fig-penguins</span></span>
+<span id="cb4-19"><a href="" aria-label="19"></a><span class="co">#| fig-cap: "Dimensions of penguins across three species."</span></span>
+<span id="cb4-20"><a href="" aria-label="20"></a><span class="co">#| warning: false</span></span>
+<span id="cb4-21"><a href="" aria-label="21"></a><span class="fu">library</span>(tidyverse, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-22"><a href="" aria-label="22"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb4-23"><a href="" aria-label="23"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb4-24"><a href="" aria-label="24"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb4-25"><a href="" aria-label="25"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb4-26"><a href="" aria-label="26"></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb4-27"><a href="" aria-label="27"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb4-28"><a href="" aria-label="28"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb4-29"><a href="" aria-label="29"></a><span class="co"># ```</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div></div>
@@ -775,33 +778,33 @@
 <div class="column center" style="width:55%;">
 <div style="font-size: 55%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="sc">---</span></span>
-<span id="cb5-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"Hello, Penguins"</span></span>
-<span id="cb5-3"><a href=""></a>format<span class="sc">:</span> html</span>
-<span id="cb5-4"><a href=""></a>execute<span class="sc">:</span></span>
-<span id="cb5-5"><a href=""></a>  echo<span class="sc">:</span> false</span>
-<span id="cb5-6"><a href=""></a><span class="sc">---</span></span>
-<span id="cb5-7"><a href=""></a></span>
-<span id="cb5-8"><a href=""></a><span class="do">## Meet the penguins</span></span>
-<span id="cb5-9"><a href=""></a></span>
-<span id="cb5-10"><a href=""></a>The __penguins__ data contains size measurements <span class="cf">for</span> </span>
-<span id="cb5-11"><a href=""></a>penguins from three islands <span class="cf">in</span> the Palmer Archipelago, </span>
-<span id="cb5-12"><a href=""></a>Antarctica.</span>
-<span id="cb5-13"><a href=""></a></span>
-<span id="cb5-14"><a href=""></a>The _three_ species of penguins have quite distinct </span>
-<span id="cb5-15"><a href=""></a>distributions of physical <span class="fu">dimensions</span> (<span class="sc">@</span>fig<span class="sc">-</span>penguins).</span>
-<span id="cb5-16"><a href=""></a></span>
-<span id="cb5-17"><a href=""></a><span class="co">#| label: fig-penguins</span></span>
-<span id="cb5-18"><a href=""></a><span class="co">#| fig-cap: "Dimensions of penguins across three species."</span></span>
-<span id="cb5-19"><a href=""></a><span class="co">#| warning: false</span></span>
-<span id="cb5-20"><a href=""></a><span class="fu">library</span>(tidyverse, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-21"><a href=""></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb5-22"><a href=""></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb5-23"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb5-24"><a href=""></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb5-25"><a href=""></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb5-26"><a href=""></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb5-27"><a href=""></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-label="1"></a><span class="sc">---</span></span>
+<span id="cb5-2"><a href="" aria-label="2"></a>title<span class="sc">:</span> <span class="st">"Hello, Penguins"</span></span>
+<span id="cb5-3"><a href="" aria-label="3"></a>format<span class="sc">:</span> html</span>
+<span id="cb5-4"><a href="" aria-label="4"></a>execute<span class="sc">:</span></span>
+<span id="cb5-5"><a href="" aria-label="5"></a>  echo<span class="sc">:</span> false</span>
+<span id="cb5-6"><a href="" aria-label="6"></a><span class="sc">---</span></span>
+<span id="cb5-7"><a href="" aria-label="7"></a></span>
+<span id="cb5-8"><a href="" aria-label="8"></a><span class="do">## Meet the penguins</span></span>
+<span id="cb5-9"><a href="" aria-label="9"></a></span>
+<span id="cb5-10"><a href="" aria-label="10"></a>The __penguins__ data contains size measurements <span class="cf">for</span> </span>
+<span id="cb5-11"><a href="" aria-label="11"></a>penguins from three islands <span class="cf">in</span> the Palmer Archipelago, </span>
+<span id="cb5-12"><a href="" aria-label="12"></a>Antarctica.</span>
+<span id="cb5-13"><a href="" aria-label="13"></a></span>
+<span id="cb5-14"><a href="" aria-label="14"></a>The _three_ species of penguins have quite distinct </span>
+<span id="cb5-15"><a href="" aria-label="15"></a>distributions of physical <span class="fu">dimensions</span> (<span class="sc">@</span>fig<span class="sc">-</span>penguins).</span>
+<span id="cb5-16"><a href="" aria-label="16"></a></span>
+<span id="cb5-17"><a href="" aria-label="17"></a><span class="co">#| label: fig-penguins</span></span>
+<span id="cb5-18"><a href="" aria-label="18"></a><span class="co">#| fig-cap: "Dimensions of penguins across three species."</span></span>
+<span id="cb5-19"><a href="" aria-label="19"></a><span class="co">#| warning: false</span></span>
+<span id="cb5-20"><a href="" aria-label="20"></a><span class="fu">library</span>(tidyverse, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-21"><a href="" aria-label="21"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb5-22"><a href="" aria-label="22"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb5-23"><a href="" aria-label="23"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb5-24"><a href="" aria-label="24"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb5-25"><a href="" aria-label="25"></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb5-26"><a href="" aria-label="26"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb5-27"><a href="" aria-label="27"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div><div class="column center" style="width:45%;">
@@ -1049,42 +1052,80 @@
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

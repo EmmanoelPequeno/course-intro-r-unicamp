@@ -332,7 +332,7 @@ $ git config --list
 
 **Forkar um diretório remoto**
 
-1. Forken o repositório `syllabus-text` da disciplina
+1. Forken o repositório `syllabus-text` de uma disciplina que ministrei
 
 ![](img/github_fork_site.png){fig-align='center'}
 

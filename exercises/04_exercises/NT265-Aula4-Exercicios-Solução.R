@@ -88,6 +88,9 @@ apply(penguins_na[, c(3:6)], 2, sd)
 # dica: apply, max e min
 apply(penguins_na[, c(3:6)], 2, max)
 apply(penguins_na[, c(3:6)], 2, min)
+apply(penguins_na[, which(sapply(penguins_na, class) %in% c("numeric", "integer"))], 2, min)
+
+which(sapply(penguins_na, class) %in% c("numeric", "integer"))
 
 ## exercicio 14 ----
 # Calcule a média da massa corporal para cada espécie de pinguim
@@ -98,7 +101,9 @@ tapply(penguins_na$body_mass_g, penguins_na$species, mean)
 # Use 'summary' para fazer a resumo estatístico descritivo da massa corporal 
 # para cada espécie de pinguim 
 # dica: tapply
-tapply(penguins_na$body_mass_g, penguins_na$species, summary)
+tapply(penguins_na$body_mass_g, 
+       penguins_na$species, 
+       summary)
 
 # programacao -------------------------------------------------------------
 

@@ -38,7 +38,7 @@
 # dica: table()
 
 ## exercicio 08 ----
-# Usando o pacote janitor e a função tabyl, crie uma tabela de frequência de 
+# Usando o pacote janitor e a função tabyl(), crie uma tabela de frequência de 
 # espécie e sexo 
 
 ## exercicio 09 ----
@@ -140,7 +140,7 @@ i
 # funcao
 check_bill <- function(---){
   
-  if((--- > 40){
+  if(--- > 40){
     return("Bico grande")
     
   }else {
@@ -148,8 +148,8 @@ check_bill <- function(---){
   }
 }
 
-check_bill((---[1])
+check_bill(---[1])
 
-sapply((---, check_bill)
+sapply(---, check_bill)
 
 # end ---------------------------------------------------------------------

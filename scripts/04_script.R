@@ -166,7 +166,7 @@ tapply(penguins_sem_na$bill_length_mm, penguins_sem_na$island, sd)
 
 ### if ----
 # valor
-x <- 4
+x <- 10
 
 # condicao
 x > 5

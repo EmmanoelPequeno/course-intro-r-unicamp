@@ -32,9 +32,9 @@ lang: pt-br
 - Documentos dinâmicos: `Quarto`
 - Aplicações web (apps): `Shiny`
 
-![](img/github_logo.png){.absolute width=30% right=100 top=100}
-![](img/package_renv.svg){.absolute width=30% right=-180 top=250}
-![](img/package_quarto.png){.absolute width=25% right=140 top=400}
+![](img/github_logo.png){.absolute width=30% right=160 top=100}
+![](img/package_renv.svg){.absolute width=30% right=-100 top=250}
+![](img/package_quarto.png){.absolute width=25% right=200 top=400}
 
 ## Reprodutibilidade
 
@@ -162,7 +162,7 @@ Manejar projetos **no tempo**
 Principal **ferramenta** utilizada em grandes projetos
 
 ![](img/git_article.png){.absolute width=50% right=520 top=150}
-![](img/git_article_fig.png){.absolute width=60% right=-150 top=150}
+![](img/git_article_fig.png){.absolute width=50% right=-50 top=170}
 ![](img/git_article_table.png){.absolute width=50% right=520 top=400}
 
 :::footer
@@ -208,6 +208,18 @@ Cada vez mais **necessário** em colaborações
 
 :::footer
 [kernel](https://www.kernel.org/), [Começando - Uma Breve História do Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Uma-Breve-Hist%C3%B3ria-do-Git#:~:text=Desde%20seu%20nascimento%20em%202005,%2Dgit%2Dbranching%5D)
+:::
+
+## git e GitHub
+
+**git**
+
+- git é software que funciona por **interface de linha de comando** (*CLI*) em shell (bash) no **terminal**
+- Sintaxe:
+![](img/git_bash.png){fig-align='center'}
+
+:::footer
+[git](https://git-scm.com/)
 :::
 
 ## git e GitHub
@@ -1084,12 +1096,10 @@ Artwork by [@allison_horst](https://x.com/allison_horst)
 - Software novo que não depende do R (instalado com o RStudio)
 - Interface de linha de comando - *Command Line Interface (CLI)*
 - Podemos usar o `Quarto` no terminal
+- Sintaxe:
 :::
 
-```{r}
-#| eval: false
-quarto help
-```
+![](img/quarto_bash.png){fig-align='center'}
 
 ## Quarto
 
