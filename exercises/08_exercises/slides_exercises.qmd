@@ -343,11 +343,7 @@ $ git config --list
 
 **Forkar um diretório remoto**
 
-<<<<<<< HEAD
-1. Forken o repositório `syllabus-text` de uma disciplina que ministrei
-=======
 1. Forken o repositório [`course-intro-r-unicamp`](https://github.com/mauriciovancine/course-intro-r-unicamp) das aulas
->>>>>>> 1bb58e513798558e408afa0ec5bb31cbbaa4ea45
 
 ![](img/github_fork_site.png){fig-align='center'}
 
