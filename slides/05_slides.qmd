@@ -271,14 +271,24 @@ Abram o script
 [Wickham & Grolemund (2017)](https://r4ds.had.co.nz/)
 :::
 
-## Pacotes
+## Fluxo de trabalho
 
 <center>
-<img src="img/tidyverse_flowchart.png" style="width:90%"/>
+<img src="img/tidyverse_flow.png" style="width:100%"/>
 </center>
 
 ::: footer
-[R Markdown + R + RStudio](https://ohi-science.org/globalfellows/why_rmarkdown.html)
+[Uma jornada pelo tidyverse](https://rpubs.com/RicardoJ/minicurso_tidyverse)
+:::
+
+## Pacotes
+
+<center>
+<img src="img/tidyverse_packages.png" style="width:80%"/>
+</center>
+
+::: footer
+[R Crash Course](https://bookdown.org/michela_cameletti/notescrashcourser/)
 :::
 
 ## Artigos {.smaller}
@@ -617,7 +627,9 @@ tibble::glimpse(si)
 
 # 
 
-<center><img src="img/package_magrittr.png" style="width:50%"/></center>
+<center>
+<img src="img/package_magrittr.png" style="width:50%"/>
+</center>
 
 ::: footer
 [magrittr](https://magrittr.tidyverse.org/)
@@ -658,6 +670,39 @@ obj <- dados %>%
   funcao1() %>% 
   funcao2()
 ```
+
+## Como funciona
+
+```{r eval=FALSE}
+data %>% 
+  filter() %>% 
+  mutate() %>% 
+  group_by() %>% 
+  summarise()
+```
+
+<br>
+<center>
+<img src="img/pipe.png" style="width:50%"/>
+</center>
+
+::: footer
+[R for Ecology](https://www.rforecology.com/post/how-to-use-pipes)
+:::
+
+## pipe nativo
+
+- Mudar a configuração de uso: 
+
+`Tools > Global Options ... > Code > Use native pipe operator, |> (requires R 4.1+)`
+
+<center>
+<img src="img/pipe_nativo.png" style="width:100%"/>
+</center>
+
+::: footer
+[chatGPT](https://chatgpt.com/c/6aecb1c5-1ca8-83e9-9b85-9ee940068bbc)
+:::
 
 # Se preparem para uma revisão de funções compostas
 
@@ -1599,7 +1644,24 @@ Artwork by [@allison_horst](https://x.com/allison_horst)
 
 ## Formato de datas no R
 
+<<<<<<< HEAD
 
+=======
+- O R entende as datas sempre como **ano-mês-dia**
+
+```{r}
+lubridate::dmy("05/11/2026")
+```
+
+<br>
+<center>
+<img src="img/data_r.png" style="width:100%"/>
+</center>
+
+::: footer
+[chatGPT](https://chatgpt.com/c/6aecb1c5-1ca8-83e9-9b85-9ee940068bbc)
+:::
+>>>>>>> 1bb58e513798558e408afa0ec5bb31cbbaa4ea45
 
 ## lubridate
 
