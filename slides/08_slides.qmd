@@ -40,7 +40,7 @@ lang: pt-br
 
 Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os mesmos dados e códigos
 
-![](img/reprodutibilidade.png){.absolute width=70% right=150 top=180}
+![](img/reprodutibilidade_maior.png){.absolute width=70% right=150 top=180}
 
 ::: footer
 [Mendes-Da-Silva (2023)](https://doi.org/10.1590/S0034-759020230408)
@@ -62,7 +62,6 @@ Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os m
 **Pilares**
 
 ::: {style="font-size: 70%;"}
-
 1. **Organização do projeto**  
    - Diretórios: `/data`, `/R`, `/output`, `/scripts`  
    
